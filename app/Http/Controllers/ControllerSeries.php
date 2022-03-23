@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use http\Env\Request;
+
 class ControllerSeries extends Controller
 {
     function Series (){
@@ -17,5 +19,13 @@ class ControllerSeries extends Controller
     {
         return view('create');
     }
+
+    public function store(Request $request){
+
+        $nome = $request->nome;
+        var_dump($nome);
+
+    }
+
 
 }
